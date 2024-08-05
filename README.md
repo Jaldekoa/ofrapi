@@ -1,8 +1,14 @@
 # ofrapi Documentation
 This repository contains a Python wrapper to easily retrieve data from the Office of Financial Research (OFR) in Pandas format using the official API.
 
+## APIs of the Office of Financial Research (OFR)
 - **[Short-term Funding Monitor: ofrapi.stfm](ofrapi/stfm/README.md)**
 - **[Hedge Fund Monitor: ofrapi.hfm](ofrapi/hfm/README.md)**
+
+## Installation
+```commandline
+pip install bcraapi
+```
 
 ## Short-term Funding Monitor
 The Short-term Funding Monitor (STFM) application programming interface (API) allows a remote application to query the Office of Financial Research for data without the need for a human intermediary to download data manually. While some API calls might be used every day, others are intended for use when setting up a remote application for a periodic refresh.
