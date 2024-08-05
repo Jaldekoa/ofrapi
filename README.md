@@ -7,7 +7,7 @@ This repository contains a Python wrapper to easily retrieve data from the Offic
 
 ## Installation
 ```commandline
-pip install bcraapi
+pip install ofrapi
 ```
 
 ## Short-term Funding Monitor
