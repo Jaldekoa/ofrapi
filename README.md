@@ -1,4 +1,4 @@
-# ofrapi Documentation
+# ofrapi documentation
 This repository contains a Python wrapper to easily retrieve data from the Office of Financial Research (OFR) in Pandas format using the official API.
 
 ## APIs of the Office of Financial Research (OFR)
