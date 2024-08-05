@@ -1,7 +1,7 @@
 from setuptools import setup
 from pathlib import Path
 
-VERSION = "0.0.1"
+VERSION = "0.0.3"
 THIS_PATH = Path(__file__).parent
 DESCRIPTION = "Python API wrapper for Office of Financial Research (OFR)"
 LONG_DESCRIPTION = (THIS_PATH / "README.md").read_text(encoding="utf-8")
