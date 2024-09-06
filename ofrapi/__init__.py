@@ -3,8 +3,9 @@ from functools import reduce
 import pandas as pd
 import requests
 
-__all__ = ['hfm', 'stfm']
+__all__ = ['hfm', 'stfm', 'bsrm']
 __base_url = "https://data.financialresearch.gov"
+__bsrm_url = "https://www.financialresearch.gov/bank-systemic-risk-monitor/data/ofr_bsrm.xlsx"
 
 
 def __encode_url(api: str, endpoint: str, query: dict) -> str:
@@ -89,3 +90,18 @@ def __categories(api: str, category: str) -> pd.DataFrame:
     df_data = pd.read_csv(__encode_url(api, "categories", {"category": category}))
     df_data["date"] = pd.to_datetime(df_data["date"])
     return df_data
+
+
+def __get_worksheet_from_url(sheet_name: str):
+    df = pd.read_excel(io=__bsrm_url, sheet_name=sheet_name)
+
+    if "Quarter" in df.columns:
+        df["Date"] = pd.to_datetime(df["Year"].astype(str)) + df["Quarter"].str.replace("Q", "").astype(
+            int) * pd.offsets.QuarterEnd(1)
+    else:
+        df["Date"] = pd.to_datetime(df["Year"].astype(str)) + pd.offsets.YearEnd(0)
+
+    df["Date"] = pd.to_datetime(df["Date"]).dt.strftime("%Y-%m-%d")
+    df = df.drop(columns=["Year", "Quarter"], errors="ignore")
+    cols = ["Date"] + [col for col in df.columns if col != "Date"]
+    return df[cols]

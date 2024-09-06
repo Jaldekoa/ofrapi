@@ -4,6 +4,7 @@ This repository contains a Python wrapper to easily retrieve data from the Offic
 ## APIs of the Office of Financial Research (OFR)
 - **[Short-term Funding Monitor: ofrapi.stfm](ofrapi/stfm/README.md)**
 - **[Hedge Fund Monitor: ofrapi.hfm](ofrapi/hfm/README.md)**
+- **[Bank Systemic Risk Monitor: ofrapi.bsrm](ofrapi/bsrm/README.md)**
 
 ## Installation
 ```commandline
@@ -75,6 +76,21 @@ The following retrieve the metadata and data for specified series.
 | ```categories```       | Returns a csv file containing the data for a category.                     |
 
 
+## Bank Systemic Risk Monitor
+The OFR Bank Systemic Risk Monitor (BSRM) is a collection of key measures for monitoring systemic risks posed by the largest banks. These include systemic importance scores for international and U.S. banks, the OFR’s Contagion Index, and other common measures of systemic risk.
+
+### Get Bank Systemic Risk Monitord data (ofrapi.bsrm)
+
+| Method                                 | Description                                                                                                           |
+|----------------------------------------|-----------------------------------------------------------------------------------------------------------------------|
+| ```get_basel_scores```                 | Retrieves a Basel scores from a set of financial indicators to identify global systemically important banks (G-SIBs). |
+| ```get_us_systemic_scores```           | Retrieves a U.S. G-SIB Surcharges data.                                                                               |
+| ```get_contagion_index```              | Retrieves the OFR's Contagion Index.                                                                                  |
+| ```get_leverage```                     | Retrieves total assets, total equity, and leverage data that are common measures used to gauge systemic risk.         |
+| ```get_short_term_wholesale_funding``` | Retrieves short-term wholesale funding data.                                                                          |
+
+
 ## API Documentation
 - [Short-term Funding Monitor - API (OFR)](https://www.financialresearch.gov/short-term-funding-monitor/api/).
 - [Hedge Fund Monitor - API (OFR)](https://www.financialresearch.gov/hedge-fund-monitor/api/).
+- [Bank Systemic Risk Monitor - NO API (OFR)](https://www.financialresearch.gov/bank-systemic-risk-monitor/).

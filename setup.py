@@ -1,7 +1,7 @@
 from setuptools import setup
 from pathlib import Path
 
-VERSION = "0.0.3"
+VERSION = "0.0.4"
 THIS_PATH = Path(__file__).parent
 DESCRIPTION = "Python API wrapper for Office of Financial Research (OFR)"
 LONG_DESCRIPTION = (THIS_PATH / "README.md").read_text(encoding="utf-8")
@@ -17,10 +17,10 @@ setup(
     description=DESCRIPTION,
     long_description=LONG_DESCRIPTION,
     long_description_content_type='text/markdown',
-    packages=["ofrapi", "ofrapi.stfm", "ofrapi.hfm", "ofrapi.tests"],
+    packages=["ofrapi", "ofrapi.stfm", "ofrapi.hfm", "ofrapi.bsrm", "ofrapi.tests"],
     test_suite='ofrapi.tests.test',
     platforms=["Any"],
-    install_requires=["setuptools>=68.2", "pandas>=2.0.0", "requests>=2.23.0"],
+    install_requires=["setuptools>=68.2", "pandas>=2.0.0", "requests>=2.23.0", "openpyxl>=3.1.0"],
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Intended Audience :: Education",
