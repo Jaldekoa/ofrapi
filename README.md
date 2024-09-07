@@ -89,8 +89,18 @@ The OFR Bank Systemic Risk Monitor (BSRM) is a collection of key measures for mo
 | ```get_leverage```                     | Retrieves total assets, total equity, and leverage data that are common measures used to gauge systemic risk.         |
 | ```get_short_term_wholesale_funding``` | Retrieves short-term wholesale funding data.                                                                          |
 
+## Financial Stress Index
+The OFR Financial Stress Index (OFR FSI) is a daily market-based snapshot of stress in global financial markets. It is constructed from 33 financial market variables, such as yield spreads, valuation measures, and interest rates. The OFR FSI is positive when stress levels are above average, and negative when stress levels are below average.
+
+### Get Financial Stress Index data (ofrapi.fsi)
+
+| Method                       | Description                                                                                   |
+|------------------------------|-----------------------------------------------------------------------------------------------|
+| ```financial_stress_index``` | Retrieves the OFR Financial Stress Index with five categories and three region contributions. |
+
 
 ## API Documentation
 - [Short-term Funding Monitor - API (OFR)](https://www.financialresearch.gov/short-term-funding-monitor/api/).
 - [Hedge Fund Monitor - API (OFR)](https://www.financialresearch.gov/hedge-fund-monitor/api/).
 - [Bank Systemic Risk Monitor - NO API (OFR)](https://www.financialresearch.gov/bank-systemic-risk-monitor/).
+- [Financial Stress Index - NO API (OFR)](https://www.financialresearch.gov/financial-stress-index/).
