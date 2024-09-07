@@ -6,11 +6,11 @@ The Basel Committee on Banking Supervision, a group of international bank superv
 G-SIB scores are calculated by averaging the following five categories of the Basel Committee's assessment methodology: size, interconnectedness, substitutability, complexity, and cross-jurisdictional activity.
 The calculated G-SIB scores and supervisory judgment determine the size of the capital add-on, or surcharge, which is shown in the legend. Banking regulators may require capital surcharges that are calculated using a different methodology. See U.S. G-SIB Surcharges for the Federal Reserve methodology applicable to U.S. G-SIBs.
 
-### get_basel_scores
+### basel_scores
 
 ```python
-from ofrapi.bsrm import get_basel_scores
-get_basel_scores()
+from ofrapi.bsrm import basel_scores
+df = basel_scores()
 ```
 
 #### Returns
@@ -23,11 +23,11 @@ U.S. G-SIBs are banks whose failure could pose a threat to the financial system.
 - The second method (Method II) uses similar inputs to the first, but replaces the measure of substitutability with a measure of short-term wholesale funding. The Method II scores are calculated by summing the following five categories of the Federal Reserve Board’s assessment methodology: size, interconnectedness, complexity, cross-jurisdictional activity, and short-term wholesale funding.
 For foreign banks, the data presented are limited to the activities of the U.S. operations.
 
-### get_us_systemic_scores
+### us_systemic_scores
 
 ```python
-from ofrapi.bsrm import get_us_systemic_scores
-get_us_systemic_scores()
+from ofrapi.bsrm import us_systemic_scores
+df = us_systemic_scores()
 ```
 #### Returns
 - `pd.DataFrame`: A DataFrame containing the U.S. G-SIB Surcharges data.
@@ -45,22 +45,22 @@ For foreign banks, the data presented are limited to the activities of the U.S. 
 ### get_contagion_index
 
 ```python
-from ofrapi.bsrm import get_contagion_index
-get_contagion_index()
+from ofrapi.bsrm import contagion_index
+df = contagion_index()
 ```
 #### Returns
 - `pd.DataFrame`: A DataFrame containing the OFR’s Contagion Index data.
 
 
-## Leverage/Assets/Equity
+## Assets/Equity/Leverage
 Total assets, total equity, and leverage are common measures used to gauge systemic risk.
 For foreign banks, the data presented are limited to the activities of the U.S. operations.
 
-### get_leverage
+### assets_equity_leverage
 
 ```python
-from ofrapi.bsrm import get_leverage
-get_leverage()
+from ofrapi.bsrm import assets_equity_leverage
+df = assets_equity_leverage()
 ```
 #### Returns
 - `pd.DataFrame`: A DataFrame containing total assets, total equity, and leverage data.
@@ -72,11 +72,11 @@ The **Short-Term Funding Dependence (STF-Dependence)** refers to the percentage 
 The **Short-Term Funding Coverage (STF-Coverage)** compares the percentage of a bank’s STFA amount to its average weighted high-quality liquid assets (HQLA).
 For foreign banks, the data presented are limited to the activities of the U.S. operations.
 
-### get_short_term_wholesale_funding
+### short_term_wholesale_funding
 
 ```python
-from ofrapi.bsrm import get_short_term_wholesale_funding
-get_short_term_wholesale_funding()
+from ofrapi.bsrm import short_term_wholesale_funding
+df = short_term_wholesale_funding()
 ```
 #### Returns
 - `pd.DataFrame`: A DataFrame containing a bank’s use of short-term wholesale funding data.

@@ -1,7 +1,7 @@
 from ofrapi import __get_worksheet_from_url
 
 
-def get_basel_scores():
+def basel_scores():
     """
     Returns a Basel scores from a set of financial indicators to identify global systemically important banks (G-SIBs).
 
@@ -11,7 +11,7 @@ def get_basel_scores():
     return __get_worksheet_from_url(sheet_name="Basel Scores")
 
 
-def get_us_systemic_scores():
+def us_systemic_scores():
     """
     Returns a U.S. G-SIB Surcharges data.
 
@@ -21,7 +21,7 @@ def get_us_systemic_scores():
     return __get_worksheet_from_url(sheet_name="US Systemic Scores")
 
 
-def get_contagion_index():
+def contagion_index():
     """
     Returns the OFR's Contagion Index.
 
@@ -31,7 +31,7 @@ def get_contagion_index():
     return __get_worksheet_from_url(sheet_name="Contagion")
 
 
-def get_leverage():
+def assets_equity_leverage():
     """
     Returns total assets, total equity, and leverage data that are common measures used to gauge systemic risk.
 
@@ -41,7 +41,7 @@ def get_leverage():
     return __get_worksheet_from_url(sheet_name="Leverage")
 
 
-def get_short_term_wholesale_funding():
+def short_term_wholesale_funding():
     """
     Returns short-term wholesale funding data.
 
