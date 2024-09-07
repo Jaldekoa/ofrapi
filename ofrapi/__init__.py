@@ -3,7 +3,7 @@ from functools import reduce
 import pandas as pd
 import requests
 
-__all__ = ['hfm', 'stfm', 'bsrm']
+__all__ = ['hfm', 'stfm', 'bsrm', 'fsi']
 __base_url = "https://data.financialresearch.gov"
 __bsrm_url = "https://www.financialresearch.gov/bank-systemic-risk-monitor/data/ofr_bsrm.xlsx"
 

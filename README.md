@@ -5,6 +5,7 @@ This repository contains a Python wrapper to easily retrieve data from the Offic
 - **[Short-term Funding Monitor: ofrapi.stfm](ofrapi/stfm/README.md)**
 - **[Hedge Fund Monitor: ofrapi.hfm](ofrapi/hfm/README.md)**
 - **[Bank Systemic Risk Monitor: ofrapi.bsrm](ofrapi/bsrm/README.md)**
+- **[Financial Stress Index: ofrapi.fsi](ofrapi/fsi/README.md)**
 
 ## Installation
 ```commandline
