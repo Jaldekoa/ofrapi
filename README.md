@@ -79,7 +79,7 @@ The following retrieve the metadata and data for specified series.
 ## Bank Systemic Risk Monitor
 The OFR Bank Systemic Risk Monitor (BSRM) is a collection of key measures for monitoring systemic risks posed by the largest banks. These include systemic importance scores for international and U.S. banks, the OFR’s Contagion Index, and other common measures of systemic risk.
 
-### Get Bank Systemic Risk Monitord data (ofrapi.bsrm)
+### Get Bank Systemic Risk Monitor data (ofrapi.bsrm)
 
 | Method                                 | Description                                                                                                           |
 |----------------------------------------|-----------------------------------------------------------------------------------------------------------------------|
